@@ -21,19 +21,20 @@ function App() {
         <div className="fixed top-0 right-0 p-4 flex items-center gap-2">
           <ConnectButton showBalance={false} />
           {isConnected && (
-            <Button 
-              variant="destructive" 
-              size="sm" 
+            <Button
+              variant="destructive"
+              size="sm"
               onClick={() => disconnect()}
             >
               Logout
             </Button>
           )}
         </div>
-        
+
         {/* Rest of your app content */}
         <div className="container mx-auto pt-16">
           {/* Your app content here */}
+          <h2 className="font-bold text-5xl">Proof of Taste</h2>
           <Routes>
             <Route path="/" element={<Upload isConnected={isConnected} />} />
             <Route path="/comparison" element={<Comparison />} />
